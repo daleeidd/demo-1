@@ -1,0 +1,16 @@
+.Contact-Map
+  position: relative
+  height: 100%
+  width: 100%
+  object-fit: cover
+
+  // Overflow to prevent showing map's edge on overscroll
+  @media $media.max-sm
+    top: -40%
+    height: 140%
+
+.Contact-Links
+  position: absolute
+  bottom: 3.5rem
+  width: 100%
+  z-index: 1

@@ -1,0 +1,28 @@
+random($min, $max)
+  floor(math(0, 'random') * ($max - $min + 1) + $min)
+
+random-binary()
+  '' + random(0, 1)
+
+reveal-letter-after($letter, $after, $current-frame, $placeholder)
+  $current-frame >= $after ? $letter : $placeholder
+
+reveal-text($text, $current-frame, $placeholder)
+  $value = ''
+  for $frame in $text
+    $value += reveal-letter-after($frame.letter, $frame.number, $current-frame, $placeholder())
+  $value
+
+binary-animation($text, $name)
+  @keyframes {$name}
+    for $frame in (0..100)
+      if $frame % 2 == 0
+        {$frame + '%'}
+          if $frame == 100
+            color: darkgray;
+          content: reveal-text($text, $frame, random-binary)
+  @keyframes {$name}-color
+    for $frame in (0..100)
+      if $frame % 2 == 0
+        {$frame + '%'}
+          content: reveal-text($text, $frame, @(){' '})

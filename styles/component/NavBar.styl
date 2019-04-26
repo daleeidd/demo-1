@@ -1,0 +1,60 @@
+.NavBar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 100%
+  width: 100%
+
+.NavBar-Item
+  font-size: 150%
+  text-decoration: none
+  font-family: monospace
+  pointer: cursor
+
+.NavBar-Item--Brand
+  font-size: 100%
+
+.NavBar-Item--Brand + .NavBar-Item ~ .NavBar-Item
+  margin-left: .5em
+
+.NavBar-Item--Brand
+.NavBar-Item--Brand + .NavBar-Item
+  margin-left: auto
+
+.Header-BrandBar
+  .NavBar
+    justify-content: center
+
+.Button
+  display: flex
+  font-size: 1.2rem
+  background-color: darkgrey
+  color: white
+  box-shadow: 0 .1em .25em rgba(0, 0, 0, 0.25)
+  border-radius: 100%
+  border: none
+  align-items: center
+  justify-content: center
+  font-weight: bold
+  transition:
+    transform: .1s ease-out,
+    background-color: .1s ease-out,
+    box-shadow: 0.1s ease-out
+  &:hover
+    background-color: darken(darkgrey, 5%)
+
+  &:active
+    transform: scale(0.95)
+    box-shadow: none
+    transition: box-shadow 0.1s ease-out
+
+.Button--Round
+  width: 3rem
+  height: 3rem
+
+.NavBar-Logo
+  width: 2em
+
+.FixedNavigation-Item--Patched
+  force-3d-acceleration()
+  force-repaint()

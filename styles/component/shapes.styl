@@ -1,0 +1,26 @@
+triangle-background($color)
+  linear-gradient(to right bottom, $color 50%, transparent 50%)
+
+.triangle
+  background-repeat: no-repeat !important
+  box-sizing: border-box
+  border-style: solid
+  border-right-color: transparent !important
+  border-bottom-color: transparent !important
+  position: relative
+  &::before
+    content: ''
+    box-sizing: border-box
+    display: block
+    border-style: solid
+    border-width: inherit
+    border-right-color: transparent !important
+    border-left-color: transparent !important
+    border-top-color: transparent !important
+    border-color: currentColor
+    transform-origin: left bottom
+    transform: rotateZ(315deg)
+    position: absolute
+    left: 0
+    bottom: 0
+    width: math(100% ** 2 + 100% ** 2, 'sqrt')

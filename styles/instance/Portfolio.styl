@@ -1,0 +1,74 @@
+.Portfolio
+  width: 100%
+
+.PortfolioItem
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+
+  &::after
+    pseudo-background()
+    background-position: center
+    background-size: cover
+    transition: all .25s ease-out
+  &::after
+    background: linear-gradient(to bottom, transparent, black)
+    opacity: 0
+    will-change: opacity
+
+  &:hover
+    .PortfolioItem-Background
+      filter: grayscale(0)
+    &::after
+      opacity: 0.8
+    .PortfolioItem-Text
+      opacity: 1
+      transform: translateY(0)
+    .PortfolioItem-Image
+      transform: scale(.75) translateY(-25%)
+
+.PortfolioItem-Image
+  margin: 0
+  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  width: 60%
+  will-change: transform
+
+.PortfolioItem-Image--Invert
+  filter: invert(100%)
+
+.PortfolioItem-Text
+  position: absolute
+  color: white
+  left: 0
+  bottom: 1.5em
+  text-align: center
+  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  font-size: 1.4em
+  font-weight: bold
+  margin: 1.5em
+  transform: translateY(100%)
+  width: calc(100% - 3em)
+  opacity: 0
+  will-change: transform, opacity
+
+.Portfolio-Filler
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $color--light-grey
+  font-size: 2rem
+
+.PortfolioItem-Background
+  filter: grayscale(100%)
+  will-change: filter
+  transition: all .25s ease-out
+  position: absolute
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  z-index: -1
+  object-fit: cover

@@ -1,0 +1,42 @@
+.Section
+  align-items: center
+  background: white
+  display: flex
+  flex-direction: column
+  justify-content: center
+  position: relative
+  width: 100%
+  z-index: 1
+
+.Section--Full
+  min-height: 100vh
+
+.Section--Hero
+  @extend .Section--Full
+  height: 100vh
+  padding-top: 0
+  padding-bottom: 0
+  force-3d-acceleration()
+  &::before
+    pseudo-background()
+    background: radial-gradient(circle farthest-corner at center bottom, #FFFFFF 60%, #BBBBBB 100%)
+    height: 120vh
+    top: -20vh
+
+.Section--Banner
+  background-color: $color--dark-grey
+
+.Section-Text
+  font-size: 2rem
+  margin: 1em 0
+  text-align: center
+  @media $media.max-md
+    font-size: 1.5rem
+
+.Section-Header
+  text-align: center
+  width: 100%
+.Section-Heading
+  font-size: 2.5em
+  margin-top: 2em
+  margin-bottom: 2em

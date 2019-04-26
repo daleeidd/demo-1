@@ -1,0 +1,43 @@
+.Parallax
+.Parallax-Window
+  pointer-events: none
+
+.Parallax-Foreground
+.Parallax-Background
+  pointer-events: auto
+
+.Parallax-Foreground
+  z-index: 1
+  position: relative
+
+.Parallax-Window
+  background: transparent
+  box-shadow: inset 0 2rem 2rem -2rem $color--shadow, inset 0 -2rem 2rem -2rem $color--shadow
+
+.Parallax-Background
+  height: 30rem
+  position: fixed
+  bottom: 0
+  width: 100%
+  z-index: -1
+  @media $media.min-md
+    height: 100vh
+
+.Parallax-Window--WithStickyFooter
+  min-height: 30rem
+  display: flex
+  align-items: flex-end
+  position: relative
+  z-index: 0
+  width: 100%
+  pointer-events: none
+  @media $media.min-md
+    min-height: 100vh
+
+.Parallax-StickyItem
+  pointer-events: auto
+  position: sticky
+  bottom: 0
+  width: 100%
+  // Might prevent some intermittent z-index issues
+  force-3d-acceleration()

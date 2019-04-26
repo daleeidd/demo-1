@@ -1,0 +1,13 @@
+// An attempt to fix fixed elements disappearing bug on Firefox
+force-repaint()
+  animation: 0.1s linear 0s force-repaint infinite
+
+@keyframes force-repaint
+  0%
+    opacity: 0.99
+  100%
+    opacity: 1
+
+// Can be useful to fix rendering issues
+force-3d-acceleration()
+  transform: translate3d(0, 0, 0)

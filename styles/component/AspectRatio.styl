@@ -1,0 +1,25 @@
+.AspectRatio
+  height: 0
+  width: 100%
+  position: relative
+
+.AspectRatio-Inner
+  position: absolute
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
+
+.AspectRatio--1x1
+  padding-bottom: 100%
+
+.AspectRatio--16x9
+  padding-bottom: 56.25%
+
+for $size in $media-sizes
+  @media $media[$size]
+    .AspectRatio--1x1-{$size}
+      padding-bottom: 100%
+
+    .AspectRatio--16x9-{$size}
+      padding-bottom: 56.25%

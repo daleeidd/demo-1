@@ -1,0 +1,70 @@
+.Header
+  height: 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 199
+
+.Header-BrandBar
+  background: rgba(255, 255, 255, .975)
+  height: 5rem
+  position: fixed
+  width: 100%
+  z-index: 1
+
+.Header-LinkBar
+  height: 5rem
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 2
+
+.Header-BrandBar
+.Header-LinkBar
+  pointer-events: none
+  a[href]
+  button
+  *[aria-controls]
+    pointer-events: all
+  .Brand
+    position: absolute
+    margin-left: 1rem
+    left: 0
+    @media $media.min-md
+      margin-left: 0
+      left: 50%
+      transform: translateX(-50%)
+
+.SideBar
+  position: fixed
+  z-index: 9999999
+  pointer-events: auto
+
+.HeaderShadow
+  box-shadow: 0 .5rem .5rem black
+  height: 4rem
+  width: 100%
+  position: fixed
+  z-index: 198;
+  top: 1rem
+  opacity: .25
+  font-size: 1rem
+
+@media $media.min-md
+  .Header
+    margin-top: 80vh
+    margin-bottom: calc(-80vh - 5rem)
+    position: sticky
+  .Header-BrandBar
+    position: sticky
+  .HeaderShadow
+    position: sticky
+    margin-top: calc(80vh + 5rem)
+    margin-bottom: calc(-80vh - 4rem)
+  .LogoCover
+    height: 5rem
+    width: 6rem
+    background: linear-gradient(to bottom, white 80%, rgba(255, 255, 255, 0))
+    position: absolute
+    top: 80vh
+    z-index: 999999

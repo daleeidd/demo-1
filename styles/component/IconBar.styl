@@ -1,0 +1,26 @@
+.IconBar
+  display: flex
+  align-items: center
+  text-decoration: none
+  color: $color--white
+  transition: background .2s ease-out
+  background-color: transparentify($color--black, .75)
+  &:hover
+    background-color: transparentify($color--black, 0.85)
+
+.IconBar-Icon
+  background: linear-gradient(to bottom right, darken(white, 15%) 10%, white)
+  padding: 1em
+
+.IconBar-Text
+  flex: 1
+  padding: 0 1em
+
+.IconBar-Icon
+  background: linear-gradient(to bottom right, lighten(black, 15%) 10%, black)
+
+@media $media.min-md
+  .IconBar
+    font-size: 1.4rem
+  .IconBar-Icon
+    background: linear-gradient(to bottom right, lighten(black, 15%) 10%, black)

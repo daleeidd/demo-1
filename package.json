@@ -1,0 +1,42 @@
+{
+  "name": "alkemic.digital",
+  "version": "0.1.0",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "scripts": {
+    "prebuild": "mkdir -p build",
+    "build": "gulp",
+    "serve": "live-server --ignore=**/*.styl",
+    "prestart": "npm run build",
+    "start": "npm run watch & npm run serve",
+    "watch": "gulp watch",
+    "postinstall": "bash initialize.sh",
+    "publish": "git push origin gh-pages"
+  },
+  "dependencies": {
+    "axis": "git+https://github.com/daleeidd/axis.git",
+    "getbasis": "git+https://github.com/daleeidd/basis.git",
+    "sanitize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "gulp": "^4.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-terser": "^1.1.7",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "live-server": "^1.2.0"
+  }
+}

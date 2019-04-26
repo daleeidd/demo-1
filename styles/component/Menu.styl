@@ -1,0 +1,87 @@
+#menu:not(.is-expanded)
+  transform: translateX(-440px)
+  transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045)
+
+#menu
+  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  z-index: 99999
+  transform: translateX(-40px)
+
+.Menu
+  position: fixed
+  width: 440px
+  height: 100%
+  max-width: 80%
+  top: 0
+  padding: 0
+  padding-left: 40px
+  display: flex
+  flex-direction: column
+
+#menu:not(.is-expanded) + .off
+  opacity: 0
+  pointer-events: none
+
+.Menu-Header
+  background-color: rgba(240, 240, 240, .5)
+  box-shadow: -40px 0 rgba(240, 240, 240, .5)
+  height: 5rem
+  padding-left: 1rem
+  padding-right: 1rem
+  font-size: 1.4rem
+  display: flex
+  align-items: center
+  position: fixed
+  height: 3.8rem
+  width: 400px
+  max-width: 80%
+  position: sticky
+  top: -5rem
+  height: 10rem
+  width: 100%
+  max-width: none
+
+.Menu-Close
+  padding: 0
+  border: none
+
+.Menu-CloseContainer
+  transform: translateX(calc(-100% + -1rem))
+
+.Menu-HeaderText
+  position: absolute
+  text-align: center
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+.Menu-Body
+  padding-top: .5em
+  padding-bottom: .5em
+
+.Menu-Item
+  color: black
+  display: block
+  padding: .5em 1em
+  transition: color .25s ease-in
+  &:hover
+    color: lighten(black, 50%)
+
+.off
+  background-color: rgba(0,0,0,0.15)
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: -1
+  cursor: default
+  top: 0
+  transition: opacity .3s ease-in
+  text-align: right
+
+*[aria-controls="menu"][aria-expanded="true"]
+  > .Icon
+    transform: rotateY(180deg)

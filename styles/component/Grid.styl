@@ -1,0 +1,195 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// GRID
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Simple X / Y sizing. Eg 1 / 3 is a third
+grid($numerator, $denominator)
+  flex: 0 0 (100% / $denominator * $numerator)
+
+// Adds a transition delay
+grid-stagger-animation($numerator, $denominator)
+  for $column in ($numerator..$denominator)
+    &:nth-of-type({$denominator}n+{$column})
+      transition-delay: 0.15s * $column
+
+grid-hide-filler($per-row-for-no-filler)
+  // This is just to override previous `display: none`
+  &:nth-last-child(odd):first-child ~ .Grid-Item--Filler
+  &:nth-last-child(even):first-child ~ .Grid-Item--Filler
+    display: block
+  // If we have the correct number of items for the last row, then we hide the filler item. The `n+1` is so that we
+  // exclude the filler item from our calculations.
+  &:nth-last-child({$per-row-for-no-filler}n+1):first-child ~ .Grid-Item--Filler
+    display: none
+
+.Grid
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  margin: 0
+  padding: 0
+
+.Grid > .Grid-Item
+  flex: 1
+
+.Grid--Gutters
+  margin: -1em 0 1em -1em
+  > .Grid-Item
+    padding: 1em 0 0 1em
+.Grid--Gutters-lg
+  margin: -1.5em 0 1.5em -1.5em
+  > .Grid-Item
+    padding: 1.5em 0 0 1.5em
+.Grid--Gutters-xl
+  margin: -2em 0 2em -2em
+  > .Grid-Item
+    padding: 2em 0 0 2em
+
+for $column in (1..12)
+  .Grid--1of{$column} > .Grid-Item
+    grid(1, $column)
+
+for $size in $media-sizes
+  @media $media[$size]
+    for $column in (1..12)
+      .Grid--1of{$column}-{$size} > .Grid-Item
+        grid(1, $column)
+      .Grid--AnimateMoveFadeIn.Grid--1of{$column}-{$size} > .Grid-Item
+        grid-stagger-animation(1, $column)
+
+.Grid--AnimateMoveFadeIn
+  > .Grid-Item
+    @media $media.min-sm
+      transition-property: transform, opacity
+      transition-duration: .5s, 0.5s
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275), linear
+      &:not(.is-top-in-view)
+        opacity: 0
+        transform: translateY(50%)
+        will-change: transform, opacity
+
+.no-scripts
+  .Grid--AnimateMoveFadeIn
+    > .Grid-Item
+      opacity: 1 !important
+      transform: translateY(0) !important
+      will-change: unset !important
+
+.Grid--AnimateFadeIn
+  > .Grid-Item
+    @media $media.min-sm
+      animation-name: bounce-in
+      animation-fill-mode: forwards
+      animation-duration: 0.5s
+      &:not(.is-half-in-view)
+        animation-play-state: paused
+
+.no-scripts
+  .Grid--AnimateFadeIn
+    > .Grid-Item
+      animation-play-state: running !important
+      animation-duration: 0s !important
+
+@keyframes bounce-in
+  0%
+    opacity: 0
+    transform: scale(.90)
+  50%
+    transform: scale(1.10)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// SQUARE GRID
+//
+// About
+// Using minimum and maximum aspect ratios, paired with minimum width, it manages to ensure that each square is
+// correctly sized for the viewport. It also sets the font-size for descendent element sizing.
+//
+// Issues
+// - Does not take overlapping content into account like fixed headers
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.Grid--Square
+  > .Grid-Item
+    grid(1, 1)
+    position: relative
+    > *
+      position: absolute
+      height: 100%
+      width: 100%
+    &::after
+      content: ''
+      display: block
+      // This means 100% of width
+      padding-bottom: 100%
+    // We need higher specificity
+    &.Grid-Item--Filler
+      // Take up remaining space
+      flex: 1
+      // Filler items will only be visible on rows with other items. The other items set the height.
+      &::after
+        padding-bottom: 0
+
+@media (min-aspect-ratio: 1/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 2)
+    grid-stagger-animation(1, 2)
+    font-size: 1.5vw
+    grid-hide-filler(2)
+
+@media (min-aspect-ratio: 2/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 3)
+    grid-stagger-animation(1, 3)
+    font-size: 1.25vw
+    grid-hide-filler(3)
+
+@media (min-aspect-ratio: 3/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 4)
+    grid-stagger-animation(1, 4)
+    font-size: 1vw
+    grid-hide-filler(4)
+
+@media (min-aspect-ratio: 4/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 5)
+    grid-stagger-animation(1, 5)
+    font-size: 0.75vw
+    grid-hide-filler(5)
+
+// Thin and tall
+@media (max-aspect-ratio: 1/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 1)
+    grid-stagger-animation(1, 1)
+    font-size: 4vw
+    grid-hide-filler(1)
+
+@media (min-width: 500px) and (max-aspect-ratio: 2/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 2)
+    grid-stagger-animation(1, 2)
+    font-size: 2vw
+    grid-hide-filler(2)
+
+@media (min-width: 1000px) and (max-aspect-ratio: 3/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 3)
+    grid-stagger-animation(1, 3)
+    font-size: 1.25vw
+    grid-hide-filler(3)
+
+@media (min-width: 1500px) and (max-aspect-ratio: 3/1)
+  .Grid--Square > .Grid-Item
+    grid(1, 4)
+    grid-stagger-animation(1, 4)
+    font-size: 1vw
+    grid-hide-filler(4)

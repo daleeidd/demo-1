@@ -1,0 +1,54 @@
+.Brand
+  display: flex
+  align-items: center
+
+.Brand-Title
+  margin: 0
+  color: transparent
+  font-family: monospace
+  white-space: pre
+  position: relative
+  &::before
+  &::after
+    position: absolute
+    left: -0.6em
+    white-space: pre
+    animation-duration: 4s
+    animation-fill-mode: forwards
+    animation-timing-function: ease-in
+    pointer-events: none
+
+  &::before
+    content: ' alkemic.digital '
+    animation-name: binary-brand
+
+  &::after
+    content: ' alkemic.digital '
+    animation-name: binary-brand-color
+    color: black
+
+  @media $media.xs
+    font-size: 1rem !important
+
+  @media $media.sm
+    font-size: 1.5rem !important
+
+$alkemic-digital = { number: 96, letter: ' ' },
+                   { number: 50, letter: 'a' },
+                   { number: 88, letter: 'l' },
+                   { number: 80, letter: 'k' },
+                   { number: 71, letter: 'e' },
+                   { number: 95, letter: 'm' },
+                   { number: 60, letter: 'i' },
+                   { number: 65, letter: 'c' },
+                   { number: 57, letter: '.' },
+                   { number: 97, letter: 'd' },
+                   { number: 93, letter: 'i' },
+                   { number: 81, letter: 'g' },
+                   { number: 45, letter: 'i' },
+                   { number: 91, letter: 't' },
+                   { number: 61, letter: 'a' },
+                   { number: 99, letter: 'l' },
+                   { number: 98, letter: ' ' }
+
+binary-animation($alkemic-digital, 'binary-brand')

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.937614,0,0,0.937614,-295.595,-83.6895)">
+        <circle cx="555.234" cy="329.229" r="239.971"/>
+    </g>
+    <g transform="matrix(1.21951,0,0,1.21951,-415.271,-207.927)">
+        <g id="Feminine" transform="matrix(1,0,0,1,0,2.5)">
+            <g id="Divider" transform="matrix(1.60667,0,0,0.327036,41.3407,297.458)">
+                <rect x="301.045" y="174.573" width="99.522" height="12.537" style="fill:rgb(170,170,170);"/>
+            </g>
+            <g id="Divider1" transform="matrix(1.60667,0,0,0.327036,-118.559,297.458)">
+                <rect x="301.045" y="174.573" width="99.522" height="12.537" style="fill:rgb(187,187,187);"/>
+            </g>
+            <g id="Water" transform="matrix(-0.825157,1.01053e-16,-8.17782e-17,-0.667769,986.299,629.979)">
+                <path d="M534.173,258.965L658.392,412.461L409.954,412.461L534.173,258.965ZM646.396,406.321L534.173,267.648L421.95,406.321L646.396,406.321Z" style="fill:rgb(170,170,170);"/>
+            </g>
+            <g id="Earth" transform="matrix(-1.025,1.25526e-16,-1.25526e-16,-1.025,1017.02,713.3)">
+                <g transform="matrix(0.761062,1.89093e-32,3.0295e-32,0.614456,93.4346,92.5606)">
+                    <path d="M534.173,258.965L658.392,412.461L409.954,412.461L534.173,258.965Z"/>
+                </g>
+                <g>
+                    <g transform="matrix(0.805031,0,0,0.651482,69.9738,81.2889)">
+                        <path d="M534.173,258.965L658.392,412.461L409.954,412.461L534.173,258.965ZM646.396,406.321L534.173,267.648L421.95,406.321L646.396,406.321Z" style="fill:rgb(187,187,187);"/>
+                    </g>
+                    <g transform="matrix(0.98274,2.52643e-32,0,1.02303,8.43818,-5.2843)">
+                        <rect x="427.151" y="321.676" width="145.698" height="2.346" style="fill:rgb(187,187,187);"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Masculine" transform="matrix(1,0,0,1,0,2.5)">
+            <g id="Divider2" transform="matrix(1.60667,0,0,0.327036,41.3407,289.258)">
+                <rect x="301.045" y="174.573" width="99.522" height="12.537" style="fill:rgb(221,221,221);"/>
+            </g>
+            <g id="Divider3" transform="matrix(1.60667,0,0,0.327036,-118.559,289.258)">
+                <rect x="301.045" y="174.573" width="99.522" height="12.537" style="fill:white;"/>
+            </g>
+            <g id="Fire" transform="matrix(0.825157,0,0,0.667769,104.745,75.0211)">
+                <path d="M658.392,412.461L409.954,412.461L534.173,258.965L658.392,412.461ZM421.95,406.321L646.396,406.321L534.173,267.648L421.95,406.321Z" style="fill:rgb(221,221,221);"/>
+            </g>
+            <g id="Air" transform="matrix(1.025,0,0,1.025,-7.97792,-8.3)">
+                <g transform="matrix(0.761062,0,0,0.615284,93.4873,92.2192)">
+                    <path d="M534.173,258.965L658.392,412.461L409.954,412.461L534.173,258.965Z"/>
+                </g>
+                <g>
+                    <g transform="matrix(0.805031,0,0,0.651482,69.9738,81.2889)">
+                        <path d="M658.392,412.461L409.954,412.461L534.173,258.965L658.392,412.461ZM421.95,406.321L646.396,406.321L534.173,267.648L421.95,406.321Z" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(0.98274,0,0,1.02303,8.8221,-5.2843)">
+                        <rect x="427.151" y="321.676" width="145.698" height="2.346" style="fill:white;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

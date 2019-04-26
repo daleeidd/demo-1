@@ -1,0 +1,167 @@
+$transform--nw = rotateZ(45deg)  translate(-15%, +15%)
+$transform--ne = rotateZ(45deg)  translate(+40%, -40%)
+$transform--sw = rotateZ(225deg) translate(+15%, -15%)
+$transform--se = rotateZ(225deg) translate(-40%, +40%)
+
+$logo-size = 400px
+$logo-triangle-size = ($logo-size / 2.5)
+$logo-border = ($logo-size / 2.5) * 0.05
+
+
+.logo
+  position: relative
+
+  height: $logo-size
+  width: $logo-size
+
+  border-radius: 100%
+  background: black
+
+  .triangle
+    position: absolute
+    height: $logo-triangle-size
+    width: $logo-triangle-size
+    border-width: $logo-border
+    // 8.3% is a magical figure
+    top: "calc((8.3% + 50%) - %s)" % ($logo-triangle-size * math(2, 'sqrt') / 2 + $logo-border / 2)
+    left: "calc((8.3% + 50%) - %s)" % ($logo-triangle-size * math(2, 'sqrt') / 2 + $logo-triangle-size * math(2, 'sqrt') / 8)
+    top: "calc((8.3% + 50%) - %s)" % ($logo-triangle-size * math(2, 'sqrt') / 2 + $logo-border / 2)
+    left: "calc((8.3% + 50%) - %s)" % ($logo-triangle-size * math(2, 'sqrt') / 2 + $logo-triangle-size * math(2, 'sqrt') / 8)
+
+    animation-duration: 5s
+    animation-fill-mode: forwards
+    animation-timing-function: $ease-out-quad
+
+    &.triangle-background
+      z-index: 62
+      color: transparent !important
+      filter: none
+
+  .triangle-s
+    // gap between north and south elements
+    margin-top: 10px
+
+  .triangle-w
+    z-index: 63
+    overflow: hidden
+    &::after
+      content: ''
+      box-sizing: border-box
+      display: block
+      border-style: solid
+      border-width: inherit
+      border-right-color: transparent !important
+      border-left-color: transparent !important
+      border-top-color: transparent !important
+      border-color: currentColor
+      transform-origin: left bottom
+      transform: rotateZ(315deg)
+      position: absolute
+      bottom: 25%
+      width: 200%
+    &.triangle-background
+      background: linear-gradient(to left top, transparent 50%, black 50%)
+  .triangle-e
+    z-index: 61
+
+  .triangle-nw
+    transform: rotateZ(45deg)
+    animation-name: triangle-nw
+
+  .triangle-sw
+    transform: rotateZ(225deg)
+    animation-name: triangle-sw
+
+  .triangle-ne
+    transform: rotateZ(45deg) translate(25%, -25%)
+    animation-name: triangle-ne
+
+  .triangle-se
+    transform: rotateZ(225deg) translate(-25%, 25%)
+    animation-name: triangle-se
+
+for $triangle in 'nw' 'ne' 'sw' 'se'
+  @keyframes triangle-{$triangle}
+    0%
+      filter: drop-shadow(0 0 100px currentColor)
+      transform: $transform-- + $triangle
+      color: $color-- + $triangle
+    40%
+      color: $color-- + $triangle
+    80%
+      filter: none
+      color: $color--grayscale- + $triangle
+    100%
+      color: $color--grayscale- + $triangle
+
+.boundary
+  animation-duration: 5s
+  animation-timing-function: $ease-out-quad
+  animation-fill-mode: forwards
+  border-color: currentColor
+  height: 0
+  border-width: 4px
+  border-style: solid
+  position: absolute
+  width: calc(85% / 2)
+  will-change: color
+
+.boundary-n
+  bottom: calc(50% + 4px)
+
+.boundary-s
+  top: calc(50% + 6px)
+
+.boundary-w
+  left: 7.5%
+
+.boundary-e
+  right: 7.5%
+
+.boundary-nw
+  animation-name: boundary-nw
+.boundary-ne
+  animation-name: boundary-ne
+.boundary-sw
+  animation-name: boundary-sw
+.boundary-se
+  animation-name: boundary-se
+
+.boundary-nw
+  color: $color--grayscale-nw
+.boundary-ne
+  color: $color--grayscale-ne
+.boundary-sw
+  color: $color--grayscale-sw
+.boundary-se
+  color: $color--grayscale-se
+
+for $boundary in 'nw' 'ne' 'sw' 'se'
+  @keyframes boundary-{$boundary}
+    0%
+      filter: drop-shadow(0 0 100px currentColor)
+      color: $color-- + $boundary
+      // Added for Safari. currentColor doesn't seem to work
+      border-color: $color-- + $boundary
+    40%
+      color: $color-- + $boundary
+      border-color: $color-- + $boundary
+    80%
+      filter: none
+      color: $color--grayscale- + $boundary
+      border-color: $color--grayscale- + $boundary
+    100%
+      color: $color--grayscale- + $boundary
+      border-color: $color--grayscale- + $boundary
+
+@media $media.max-md
+  .logo
+    transform: scale(.8)
+
+@media $media.max-sm
+  .logo
+    transform: scale(.6)
+
+@media $media.xs
+  .logo
+    transform: scale(.7)

@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////////////////////
+// MEDIA QUERIES
+///////////////////////////////////////////////////////////////////////////////
+
+$media-min-xs = 0
+$media-max-xs = 383px
+$media-min-sm = 384px
+$media-max-sm = 575px
+$media-min-md = 576px
+$media-max-md = 767px
+$media-min-lg = 768px
+$media-max-lg = 1023px
+$media-min-xl = 1024px
+
+// Maintains correct order for iteration
+$media-sizes      = xs min-sm sm max-sm min-md md max-md min-lg lg max-lg xl
+$media-sizes-only = xs sm md lg min-xl
+$media-sizes-min  = min-xs min-sm min-md min-lg min-xl
+$media-sizes-max  = max-xs max-sm max-md max-lg
+$media-sizes-up   = min-sm min-md min-lg min-xl
+$media-sizes-down = max-lg max-md max-sm max-xs
+
+$media = {
+  min-xs: '(max-width: ' + $media-min-xs + ')',
+  xs:     '(min-width: ' + $media-min-xs + ') and (max-width: ' + $media-max-xs + ')',
+  max-xs: '(max-width: ' + $media-max-xs + ')',
+  min-sm: '(min-width: ' + $media-min-sm + ')',
+  sm:     '(min-width: ' + $media-min-sm + ') and (max-width: ' + $media-max-sm + ')',
+  max-sm: '(max-width: ' + $media-max-sm + ')',
+  min-md: '(min-width: ' + $media-min-md + ')',
+  md:     '(min-width: ' + $media-min-md + ') and (max-width: ' + $media-max-md + ')',
+  max-md: '(max-width: ' + $media-max-md + ')',
+  min-lg: '(min-width: ' + $media-min-lg + ')',
+  lg:     '(min-width: ' + $media-min-lg + ') and (max-width: ' + $media-max-lg + ')',
+  max-lg: '(max-width: ' + $media-max-lg + ')',
+  min-xl: '(min-width: ' + $media-min-xl + ')'
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// COLORS
+///////////////////////////////////////////////////////////////////////////////
+
+$color--white = #FFFFFF
+$color--black = #000000
+$color--soft-black = #111111
+$color--light-grey = #DDDDDD
+$color--dark-grey = #A9A9A9
+
+
+$color--nw = #F3F315
+$color--ne = #DD0048
+$color--sw = #39FF14
+$color--se = #4666FF
+
+$color--grayscale-nw = #FFF
+$color--grayscale-ne = #DDD
+$color--grayscale-sw = #BBB
+$color--grayscale-se = #999
+
+$color--shadow = rgba(0, 0, 0, 0.50)

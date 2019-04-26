@@ -1,0 +1,66 @@
+
+._background-image
+  background-size: cover
+  background-position: center
+  height: 100%
+  width: 100%
+
+._placeholder
+  visibility: hidden
+
+._link-inherit
+  color: inherit
+  text-decoration: inherit
+
+._h1
+  color: blue
+  @extend h1
+
+._no-styles
+  button&
+    border: none
+
+._screen-reader
+  display: none
+
+._hidden
+  display: none
+
+._rectangle-size
+  padding-bottom: 50%
+  width: 100%
+  for $size in $media-sizes
+    &-{$size}
+      @media $media[$size]
+        padding-bottom: 50%
+        width: 100%
+
+._square-size
+  padding-bottom: 100%
+  width: 100%
+  for $size in $media-sizes
+    &-{$size}
+      @media $media[$size]
+        padding-bottom: 100%
+        width: 100%
+
+._round
+  border-radius: 100%
+  for $size in $media-sizes
+    &-{$size}
+      @media $media[$size]
+        border-radius: 100%
+
+._invisible
+  visibility: hidden
+  for $size in $media-sizes
+    &-{$size}
+      @media $media[$size]
+        visibility: hidden
+
+._excluded
+  display: none
+  for $size in $media-sizes
+    &-{$size}
+      @media $media[$size]
+        display: none

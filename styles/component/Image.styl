@@ -1,0 +1,16 @@
+.Image
+  max-width: 100%
+  width: 100%
+  margin-bottom: 1.5rem
+
+@media $media.min-md
+  .Image--Left,
+  .Image--Right
+    width: calc(100% - 61.80%)
+    object-fit: cover
+  .Image--Left
+    float: left
+    margin-right: 1.75rem
+  .Image--Right
+    float: right
+    margin-left: 1.75rem
