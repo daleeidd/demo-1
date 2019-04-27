@@ -67,7 +67,3 @@ typings/
 # Project
 /styles/normalize.styl
 /styles/vendor
-
-# Build
-/build/
-*.min.*

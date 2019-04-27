@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<g>
+	<g id="rj">
+		<ellipse fill="#E4EC6F" cx="396.3" cy="329.7" rx="34.5" ry="164.3"/>
+
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -210.9046 383.6814)" fill="#C3CF32" cx="357.7" cy="446.4" rx="34.5" ry="55.7"/>
+
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -209.0334 376.3591)" fill="#E4EC6F" cx="349.8" cy="440.5" rx="34.5" ry="72.6"/>
+		<circle fill="#E4EC6F" cx="395.3" cy="95.2" r="37"/>
+		<circle fill="#C3CF32" cx="408.3" cy="76.3" r="8.4"/>
+	</g>
+	<g id="re">
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 249.1301 -174.1209)" fill="#FDF575" cx="334.7" cy="213.7" rx="38.4" ry="55"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 250.8122 -180.6865)" fill="#F4EA34" cx="343.5" cy="212.4" rx="17.1" ry="23.2"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 252.1153 -181.4545)" fill="#FDF575" cx="345.1" cy="213.6" rx="17.1" ry="24.5"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 288.6923 -171.1298)" fill="#F4EA34" cx="350.9" cy="262.9" rx="30.9" ry="54.3"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 289.5195 -171.4013)" fill="#FDF575" cx="351.7" cy="263.8" rx="30.9" ry="55"/>
+	</g>
+	<ellipse id="rl" fill="#FDCA4C" cx="286.2" cy="164.3" rx="34.5" ry="164.3"/>
+	<ellipse id="ll" fill="#FDB34C" cx="252.7" cy="164.3" rx="34.5" ry="164.3"/>
+	<g id="le">
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 211.547 -73.47)" fill="#FD864F" cx="194.5" cy="218.6" rx="38.4" ry="55"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 213.2292 -80.0356)" fill="#DC561F" cx="203.2" cy="217.4" rx="17.1" ry="23.2"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 214.5322 -80.8036)" fill="#FD864F" cx="204.8" cy="218.6" rx="17.1" ry="24.5"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 251.3102 -69.9939)" fill="#DC561F" cx="210.1" cy="268.4" rx="30.9" ry="55"/>
+
+			<ellipse transform="matrix(0.7071 0.7071 -0.7071 0.7071 251.9365 -70.7503)" fill="#FD864F" cx="211.4" cy="268.7" rx="30.9" ry="55"/>
+	</g>
+	<g id="lj">
+		<ellipse fill="#FC6356" cx="151" cy="331.4" rx="34.5" ry="164.3"/>
+
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -283.9252 210.7428)" fill="#E32E1D" cx="112.4" cy="448.1" rx="34.5" ry="55.7"/>
+
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -282.054 203.4206)" fill="#FC6356" cx="104.5" cy="442.2" rx="34.5" ry="72.6"/>
+		<circle fill="#FC6356" cx="151" cy="95.2" r="37"/>
+		<circle fill="#E02718" cx="164" cy="76.3" r="8.4"/>
+	</g>
+</g>
+</svg>

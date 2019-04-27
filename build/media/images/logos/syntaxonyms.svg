@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<rect x="73.7" y="73.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 249.9997 -103.5534)" fill="#666666" width="352.6" height="352.6"/>
+<rect x="-34.7" y="335.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 294.9608 4.8396)" fill="#333333" width="352.7" height="46.1"/>
+<rect x="189.5" y="332.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -139.2512 353.6092)" fill="#B3B3B3" width="335.5" height="25.4"/>
+<g>
+
+		<rect x="65.9" y="240.5" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 34.668 516.6176)" fill="#B3B3B3" width="116.8" height="21.2"/>
+
+		<rect x="65.9" y="172.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 342.0116 225.3754)" fill="#B3B3B3" width="116.8" height="21.2"/>
+</g>
+<g>
+
+		<rect x="316.9" y="173.1" transform="matrix(0.7071 0.7071 -0.7071 0.7071 239.832 -211.5497)" fill="#B3B3B3" width="116.8" height="21.2"/>
+
+		<rect x="316.9" y="240.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -67.8048 338.9771)" fill="#B3B3B3" width="116.8" height="21.2"/>
+</g>
+<rect x="120.5" y="207.6" transform="matrix(-0.3832 0.9236 -0.9236 -0.3832 545.9651 71.8876)" fill="#B3B3B3" width="256.9" height="21.2"/>
+</svg>
