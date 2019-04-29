@@ -55,6 +55,10 @@
 .NavBar-Logo
   width: 2em
 
+// Otherwise, these items will disappear on scroll
 .FixedNavigation-Item--Patched
   force-3d-acceleration()
-  force-repaint()
+  //// Disable for now. Firefox is the only one still with issues, and force-3d-acceleration improves it enough. This
+  //// causes a significant performance cost. An animation-delay will mitigate this as most of the performance is needed
+  //// on load.
+  // force-repaint()
