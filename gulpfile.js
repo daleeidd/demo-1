@@ -36,8 +36,8 @@ const images = gulp.parallel(webp, fallbackImages)
 
 exports.watch = function () {
   gulp.watch('media/images/**/*', images)
-  gulp.watch('./scripts/**/*.js', scripts)
-  gulp.watch('./styles/**/*.styl', styles)
+  gulp.watch(['index.js', './scripts/**/*.js'], scripts)
+  gulp.watch(['index.styl', './styles/**/*.styl'], styles)
 }
 
 exports.default = gulp.parallel(images, scripts, styles)
